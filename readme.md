@@ -7,7 +7,10 @@
 
 ##10-17
 ###[Git-Multi-Accounts-Deploy](git-multi-accounts-deploy.md)
-###[Data-binding-2 (UI updating)](data-binding-2.md)
+###[Data-binding-2 (UI-updating)](data-binding-2.md)
 
 ##10-18
-###[Git-command-line](git-command-line.md)
+###[Git-command-line](git-command-line.md)(still updating)
+
+##10-19
+###[RecyclerView-1](recycler-view-1.md)

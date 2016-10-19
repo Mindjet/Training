@@ -195,3 +195,5 @@ public class MyOnclickListener implements View.OnClickListener{
 　　主要，监听器类的访问权限须为`public`，因为在`Binding`类中会直接引用该类。同时需要实例化出该`onclickListener`并且编写`getOnclickListener`方法。
 
 ---
+
+[下一篇data-binding的文章](data-binding-2.md)

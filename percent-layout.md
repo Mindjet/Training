@@ -15,5 +15,5 @@ PercentLayout是Google的开源项目，此处使用 [@hongyangAndroid](https://
  - 使用`xx%w`来设置为父控件宽度的某个百分比，使用`xx%h`来设置为父控件高度的某个百分比。
 
 ###4. 效果
-<img src="percentlayout.png" width="200">
+<img src="screenshots/percentlayout.png" width="250">
 
