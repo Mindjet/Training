@@ -20,7 +20,6 @@
 
 ```
 compile 'com.android.support:recyclerview-v7:24.2.1'
-
 ```
 注意版本号，我的`compileSDK`是`24`，所以我用的`24`开头的版本，这需要你根据你的`compileSDK`进行修改。
 
@@ -32,7 +31,6 @@ compile 'com.android.support:recyclerview-v7:24.2.1'
 
 ```
 mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
 ```
 当然还有其他样式：
 
