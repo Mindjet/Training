@@ -175,11 +175,11 @@ public class NormalRecyclerViewAdapter extends RecyclerView.Adapter<NormalRecycl
 
 ### 4. 效果
 - `LinearLayoutManager`:  
-<img src="screenshots/reclycler-view-screen-1.png" width="250"/>  
+<img src="screenshots/recycler-view-screen-1.png" width="250"/>  
 
 
 - `GridLayoutManager`:  
-<img src="screenshots/reclycler-view-screen-2.png" width="250"/>
+<img src="screenshots/recycler-view-screen-2.png" width="250"/>
 
 
 ---

@@ -13,4 +13,7 @@
 ###[Git-command-line](git-command-line.md)(still updating)
 
 ##10-19
-###[RecyclerView-1](recycler-view-1.md)
+###[RecyclerView-1 (introduction and simple sample)](recycler-view-1.md)
+
+## 10-20
+###[RecyclerView-2 (multi-item and waterfall)](recycler-view-2.md)
