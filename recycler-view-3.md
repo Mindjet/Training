@@ -104,8 +104,13 @@ public boolean onLongClick(View v) {
         mOnItemClickListener.onLongClickListener(v, holder.mTextView.getText().toString(), holder.getLayoutPosition());
     }
 
-    return false;
+    return true;
 }
 ```
 
 注意到，可以使用`view.getTag()`方法获得对应的`holder`，而通过`holder`的`getLayoutPosition()`等又可以获得更多信息。
+
+同时，需要考虑`onLongClick`方法的返回值，返回为`true`说明点击事件被`onLongClick`消费掉，不会引起其他点击事件；若返回`false`，则`onLongClick`方法没有消费点击事件，在手指抬起时会触发`onClick`方法。
+
+## 总结
+虽然`RecyclerView`本事不提供`onItemClickListener`接口，但是通过自己实现能够实现更多自定义功能。
