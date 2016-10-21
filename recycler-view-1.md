@@ -187,6 +187,10 @@ public class NormalRecyclerViewAdapter extends RecyclerView.Adapter<NormalRecycl
 ## 总结
 `RecyclerView`果然好用，是时候抛弃`ListView`了。
 
+---
+
+*更多关于`RecyclerView`，请看[RecyclerView-2](recycler-view-2.md)和[RecyclerView-3](recycler-view-3.md)。*
+
 
 
 

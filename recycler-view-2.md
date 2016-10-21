@@ -169,5 +169,9 @@ public void onBindViewHolder(final MyViewHolder holder, final int position) {
 ## 总结
 `RecyclerView`玩年。
 
+---
+
+*关于`RecyclerView`监听器部分，请看[RecyclerView-3](recycler-view-3.md)*
+
 
 
