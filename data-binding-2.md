@@ -12,7 +12,7 @@
 ### 2. 修改实体类
 我们之前的实体类是这样的：
 
-```
+```Java
 public class User {
 
     private String name;
@@ -43,7 +43,7 @@ public class User {
 
 此时，`User`类变为：
 
-```
+```Java
 public class User extends BaseObservable {
 
     public ObservableField<String> name = new ObservableField<>();
@@ -60,7 +60,7 @@ public class User extends BaseObservable {
 ```
 可以看见，代码极其简洁，不用设置`setter/getter`。需要注意的是，需要为每个变量**实例化**。成员变量以下面的方式赋值和获取：
 
-```
+```Java
 user.name.set("xxxx");
 String name = user.name.get();
 ```
@@ -70,7 +70,7 @@ String name = user.name.get();
 ### 3. 在点击（或其他）事件中改变数据
 如在按钮的点击事件中改变`user`的`name`值，`TextView`即随之更新。
 
-```
+```Java
 user.name.set(String.valueOf(Math.random() * 100));
 ```
 

@@ -127,8 +127,10 @@ public void clearView(RecyclerView recyclerView, RecyclerView.ViewHolder viewHol
 ```
 
 ## 效果
-![gif](blob:chrome-extension://cdneggiaafcmelgcaiihmhiagieomgfj/fd016e36-08a5-4674-b89a-9aed9be2cdef)
+<iframe src="screenshots/recycler-view-anim.gif">
 
 
 ## 总结
 不想说太多，`RecyclerView`就是好用。
+
+

@@ -7,7 +7,7 @@
 ## 定义监听器接口
 为了保证`RecyclerViewAdapter`的解耦性，此处将监听器接口定义在适配器的外部。
 
-```
+```Java
 public interface onItemClickListener {
 
     void onNormalClickListener(View view, String string, int position);
@@ -22,7 +22,7 @@ public interface onItemClickListener {
 ## 监听器实例化
 在`adapter`内部，维护一个`onItemClickListener`类型的全局变量`mOnItemClickListener`，并为其设置`setter`：
 
-```
+```Java
 private ListenerActivity.onItemClickListener mOnItemClickListener;
 
 public void setOnItemClickListener(ListenerActivity.onItemClickListener onItemClickListener) {
@@ -32,7 +32,7 @@ public void setOnItemClickListener(ListenerActivity.onItemClickListener onItemCl
 
 同时，在外部重写监听器的内部方法，并把监听器通过`setter`设置给`adapter`：
 
-```
+```Java
 final ListenerAdapter adapter = new ListenerAdapter(data, this);
 adapter.setOnItemClickListener(new onItemClickListener() {
     @Override
@@ -54,13 +54,13 @@ mRecyclerView.setAdapter(adapter);
 ## 监听器绑定
 `adapter`需要实现`View.onClickListener`和`View.onLongClickListener`方法：
 
-```
+```Java
 public class ListenerAdapter extends RecyclerView.Adapter<ListenerAdapter.TextViewHolder> implements View.OnClickListener, View.OnLongClickListener 
 ```
 
 在`adapter`的`onCreateViewHolder`方法中，为`view`绑定监听器：
 
-```
+```Java
 public TextViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
     View view = mInflater.inflate(R.layout.text_item, parent, false);
@@ -73,7 +73,7 @@ public TextViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 ## 数据与view绑定
 在点击事件中，唯一传入的参数是`view`。如`onclick(View v)`，如果想获取该`view`的更多信息，需要将对应的`holder`绑定到`view`上。
 
-```
+```Java
 public void onBindViewHolder(TextViewHolder holder, int position) {
 
     holder.mTextView.setText(data.get(position));
@@ -85,7 +85,7 @@ public void onBindViewHolder(TextViewHolder holder, int position) {
 ## 点击事件中调用接口方法
 `adapter`实现了`View.onClickListener`和`View.onLongClickListener`接口，需要重写接口的两个方法`onClick`和`onLongClick`，在这两个方法中调用自定义接口`onItemClickListener`中对应的方法：
 
-```
+```Java
 @Override
 public void onClick(View v) {
 
@@ -114,3 +114,7 @@ public boolean onLongClick(View v) {
 
 ## 总结
 虽然`RecyclerView`本事不提供`onItemClickListener`接口，但是通过自己实现能够实现更多自定义功能。
+
+---
+
+*关于`RecyclerView`拖拽和滑动部分，请看[RecyclerView-4](recycler-view-4.md)。*

@@ -16,7 +16,7 @@
 ### 2. 导入
 　　基于`Andoird Studio`开发，则在`module`所属的`build.gradle`文件中加入：  
 
-```
+```Gradle
 android{
 			xxx
 			...
@@ -27,7 +27,7 @@ android{
 ```
 　　另外，需要在项目的`build.gradle`中加入：
 
-```
+```Gradle
 dependencies{
 		...
 		classpath 'com.android.databinding:dataBinder:1.0-rc0'
@@ -42,7 +42,7 @@ dependencies{
 
 　　假设我们有实体类`User`，其中有两个字符串成员变量`name`和`age`。使用`data-binding`，需要为实体类设置`getter`。
   
-```
+```Java
 public class User {
 
     private String name;
@@ -71,7 +71,7 @@ public class User {
 　　对于`layout`文件，最外层的节点必须为`<layout></layout>`，在其中通过`<data>`标签引入`variable`，或者使用`import`导入系统自带的类。  
 　　而在控件中，利用`@{bean.xxx}`则可以直接引入数据。
   
-```
+```XML
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -105,7 +105,7 @@ public class User {
 
 　　对于使用了`<layout>`节点的`xml`布局文件，`databinding`会自动为其生成`Binding`类，如此处的`activity_main.xml`则生成`ActivityMainBinding.java`，利用该类可以实现数据的绑定。
 
-```
+```Java
 ActivityMainBinding mBinding = DataBindingUtil.setContentView(R.layout.activity_main);
 User user = new User("21","Mindjet");
 mBinding.setUser(user);
@@ -124,7 +124,7 @@ mBinding.setUser(user);
 
 　　在布局文件中，需要引入`MyBindingAdapter`和`User`:
 
-```
+```XML
 <data>
 
     <variable
@@ -139,7 +139,7 @@ mBinding.setUser(user);
 ```
 　　在控件中加入数据：
 
-```
+```XML
 <TextView  
      android:id="@+id/tv_name"  
      android:layout_width="wrap_content"  
@@ -152,7 +152,7 @@ mBinding.setUser(user);
 --
 　　回到`MyBindingAdapter`中，主要是`getView`方法：
 
-```
+```Java
 public View getView(int position, View convertView, ViewGroup parent) {
 
     if (convertView == null) {
@@ -180,7 +180,7 @@ public View getView(int position, View convertView, ViewGroup parent) {
 
 　　我们利用`@{adapter.onclickListener}`为控件设置监听器，意味着在`MyBindingAdapter`中需要有一个监听器成员变量：
 
-```
+```Java
 public class MyOnclickListener implements View.OnClickListener{
 
     @Override

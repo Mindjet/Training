@@ -18,7 +18,7 @@
 ## 导入
 在项目`module`的`build.gradle`下加入：
 
-```
+```Gradle
 compile 'com.android.support:recyclerview-v7:24.2.1'
 ```
 注意版本号，我的`compileSDK`是`24`，所以我用的`24`开头的版本，这需要你根据你的`compileSDK`进行修改。
@@ -29,19 +29,19 @@ compile 'com.android.support:recyclerview-v7:24.2.1'
 ## 使用
 ### 1. 设置布局样式
 
-```
+```Java
 mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 ```
 当然还有其他样式：
 
-```
+```Java
 mRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));  //2，代表一行有两个项
 mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, OrientationHelper.VERTICAL));  //其中第二个参数代表滑动的方向，2代表与滑动方向垂直的方向的项目数
 ```  
 
 ### 2. 绑定适配器
 
-```
+```Java
 mRecyclerView.setAdapter(new NormalTextViewAdapter(this));
 ```
 
@@ -51,7 +51,7 @@ mRecyclerView.setAdapter(new NormalTextViewAdapter(this));
 
 #### 确定泛型 
 
-```
+```Java
 public class NormalRecyclerViewAdapter extends RecyclerView.Adapter<NormalRecyclerViewAdapter.NormalTextViewHolder>
 ```
 
@@ -59,7 +59,7 @@ public class NormalRecyclerViewAdapter extends RecyclerView.Adapter<NormalRecycl
 
 #### 编写ViewHolder
 
-```
+```Java
 public static class NormalTextViewHolder extends RecyclerView.ViewHolder{
 
     TextView mTextView;
@@ -83,7 +83,7 @@ public static class NormalTextViewHolder extends RecyclerView.ViewHolder{
 
 #### 重写onCreateViewHolder方法
 
-```
+```Java
 @Override
 public NormalTextViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
     return new NormalTextViewHolder(mLayoutInflater.inflate(R.layout.text_item,parent,false));
@@ -94,7 +94,7 @@ public NormalTextViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
 #### 编写onBindViewHolder方法
 
-```
+```Java
 @Override
 public void onBindViewHolder(NormalTextViewHolder holder, int position) {
     holder.mTextView.setText(Titles[position]);
@@ -104,7 +104,7 @@ public void onBindViewHolder(NormalTextViewHolder holder, int position) {
 
 #### 完整代码
 
-```
+```Java
 package com.mindjet.recyclerviewdemo;
 
 import android.content.Context;
@@ -189,7 +189,7 @@ public class NormalRecyclerViewAdapter extends RecyclerView.Adapter<NormalRecycl
 
 ---
 
-*更多关于`RecyclerView`，请看[RecyclerView-2](recycler-view-2.md)和[RecyclerView-3](recycler-view-3.md)。*
+*更多关于`RecyclerView`，请看[RecyclerView-2](recycler-view-2.md)、[RecyclerView-3](recycler-view-3.md)和[RecyclerView-4](recycler-view-4.md)。*
 
 
 

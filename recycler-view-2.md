@@ -17,7 +17,7 @@
 ### 1. 编写两个ViewHolder
 `ButtonViewHolder`:
 
-```
+```Java
 public static class ButtonViewHolder extends RecyclerView.ViewHolder {
 
     Button mButton;
@@ -31,7 +31,7 @@ public static class ButtonViewHolder extends RecyclerView.ViewHolder {
 
 `ImageViewHolder`:
 
-```
+```Java
 public static class ImageViewHolder extends RecyclerView.ViewHolder {
 
     TextView mTextView;
@@ -49,7 +49,7 @@ public static class ImageViewHolder extends RecyclerView.ViewHolder {
 
 ### 2. 重写getItemViewType方法
 
-```
+```Java
 public int getItemViewType(int position) {
     return mItemList.get(position).getItemType();
 }
@@ -57,7 +57,7 @@ public int getItemViewType(int position) {
 
 ### 3. 重写onCreateViewHolder方法
 
-```
+```Java
 public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
     if (viewType == Item.ITEM_TYPE.ITEM_TYPE_BUTTON.ordinal())
@@ -75,7 +75,7 @@ public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType
 
 ### 4. 重写onBindViewHolder方法
 
-```
+```Java
 public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 
     Item item = mItemList.get(position);
@@ -104,7 +104,7 @@ public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 ### 2. 利用StaggerLayoutManager
 利用`StaggerLayoutManager`可以轻松地实现瀑布流效果。
 
-```
+```Java
 mRecyclerView.setLayoutManager(new StaggerLayoutManager(3, StaggeredGridLayoutManager.VERTICAL));
 ```
 
@@ -115,7 +115,7 @@ mRecyclerView.setLayoutManager(new StaggerLayoutManager(3, StaggeredGridLayoutMa
 
 在`ViewHolder`为每个`TextView`设定随机高度：
 
-```
+```Java
 public class MyViewHolder extends RecyclerView.ViewHolder {
 
     TextView mTextView;
@@ -137,7 +137,7 @@ public class MyViewHolder extends RecyclerView.ViewHolder {
 
 在`onBindViewHolder`方法中：
 
-```
+```Java
 public void onBindViewHolder(final MyViewHolder holder, final int position) {
 
     holder.mTextView.setText(data.get(position));
@@ -171,7 +171,7 @@ public void onBindViewHolder(final MyViewHolder holder, final int position) {
 
 ---
 
-*关于`RecyclerView`监听器部分，请看[RecyclerView-3](recycler-view-3.md)*
+*关于`RecyclerView`监听器部分，请看[RecyclerView-3](recycler-view-3.md)，关于拖拽和滑动部分，请看[RecyclerView-4](recycler-view-4.md)*
 
 
 
