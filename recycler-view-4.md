@@ -127,7 +127,7 @@ public void clearView(RecyclerView recyclerView, RecyclerView.ViewHolder viewHol
 ```
 
 ## 效果
-<iframe src="screenshots/recycler-view-anim.gif">
+<iframe src="screenshots/recycler-view-anim.gif"/>
 
 
 ## 总结
