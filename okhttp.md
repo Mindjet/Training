@@ -187,3 +187,6 @@ Connection: Closed
 
 通过`Response`对象，使用`response.body()`可以获得`message-body`，通过`request.headers`可以得到集合对象`Headers`。利用`headers.name(index)`和`headers.value(index)`可以分别得到每个`header`的名字和值。
 
+## 总结
+正在适应`OkHttp`。
+
