@@ -1,23 +1,21 @@
 #Github-Api
 
-This post introduces how to use [`Github-api`](https://developer.github.com/v3/) and how to fetch data with [`Okhttp`](https://github.com/square/okhttp), decode data in json with [`Gson`](https://github.com/google/gson)and display items with [`RecyclerView`](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html).
+This post introduces how to use [`Github-Api`](https://developer.github.com/v3/) and how to fetch data with [`Okhttp`](https://github.com/square/okhttp), decode data in json with [`Gson`](https://github.com/google/gson)and display items with [`RecyclerView`](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html).
 
 And oh, of course all I do is based on `Android`.
 
 ## Fetch data
-With `Github-Api`, it's simple to get information from [github](https://github.com). Here I fetch profile of my github account, and information of all my repos.
-
-Using `OkHttp` makes it much easier.
+With `Github-Api`, it's simple to get information from [Github.com](https://github.com). Here I fetch profile of my github account, and information of all my repos.  
 
 By [this guide](https://developer.github.com/v3/repos/#list-user-repositories), we know that using:
 
  ```
 GET https://api.github.com/users/:username/repos
  ``` 
- can list someone's repos. 
+can list someone's repos. 
  
- 
- The code fragment below is what I do with `OkHttp` to get results:
+Using `OkHttp` makes it much easier.  
+The code fragment below is what I do with `OkHttp` to get results:
  
 ```Java
 private final String REPO_USER_PREFIX = "https://api.github.com/users/";
@@ -116,7 +114,7 @@ public class RepoInfo {
 
 Do remember to use annotation `@SerializedName` wherever your variable name is not the same as the key name in the `Json`.
 
-After implementing `Java Object`, the `Json` can be easily using `Gson` transfer to it like this:
+After this, the `Json` can be easily transfer to `Java Object` using `Gson` like this:
 
 ```Java
 Gson mGson = new Gson();
@@ -127,12 +125,12 @@ The decode operation is supposed to be done in a worker thread, like in `onRespo
 Now we get what we want.
 
 ## Display data
-`RecyclerView` is an excellent view that can display items perfectly. It needs a `RecyclerView.Adapter` to bind data. You can visit [another post (RecyclerView)](https://github.com/Mindjet/Way2Android/blob/master/recycler-view-1.md) to see how to use it. (The post is in Chinese.)
+`RecyclerView` is an excellent view that can display items perfectly. You can visit [another post (RecyclerView)](https://github.com/Mindjet/Way2Android/blob/master/recycler-view-1.md) to see how to use it. (The post is in Chinese.)
 
 
 ## Screenshot
 
-<img src="screenshots/github-api.png" width="250"/>
+<img src="screenshots/github-api.png" width="280"/>
 
 Oh you may ask that how can I get the profile of a specific user like the first item in the picture.
 
@@ -142,10 +140,10 @@ You can get it by:
 GET https://api.github.com/users/:username
 ```
 
-The result still comes back in `Json`, I am sure that decode the it and display it just in the same way I do above.
+The result still comes back in `Json`, I am sure that you can decode the it and display it just in the same way I do above.
 
 ## Source code
 You can get the source code from my repo [NetworkThirdPartyLib](https://github.com/Mindjet/NetworkThirdPartyLib).
 
-the code about this post is mainly in `GithubActivity.java` and `GithubAdapter.java`.
+The code about this post is mainly in `GithubActivity.java` and `GithubAdapter.java`.
 
