@@ -3,7 +3,7 @@
 ##10-14
 ###[PercentLayout](percent-layout.md)
 
-###[Data-binding-1 (introduciton and usage in listview)](data-binding-1.md)
+###[Data-binding-1 (introduciton and usage in listview)](data-binding-1-en.md)
 
 ##10-17
 ###[Git-Multi-Accounts-Deploy](git-multi-accounts-deploy.md)

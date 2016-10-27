@@ -1,4 +1,5 @@
 # Data-binding-1
+[Switch to English version](data-binding-1-en.md)
 
 >####The Data Binding Library offers both flexibility and broad compatibility — it's a support library, so you can use it with all Android platform versions back to Android 2.1 (API level 7+). 
 
@@ -192,7 +193,7 @@ public class MyOnclickListener implements View.OnClickListener{
     }
 }
 ```
-　　主要，监听器类的访问权限须为`public`，因为在`Binding`类中会直接引用该类。同时需要实例化出该`onclickListener`并且编写`getOnclickListener`方法。
+　　注意，监听器类的访问权限须为`public`，因为在`Binding`类中会直接引用该类。同时需要实例化出该`onclickListener`并且编写`getOnclickListener`方法。
 
 ---
 
