@@ -3,7 +3,7 @@
 
 >Type-safe HTTP client for Android and Java by Square, Inc.
 
-In `Retrofit 1.x`, there is no direct way to end a active task, you need to do it manually, which turns out pretty hard.
+In `Retrofit 1.x`, there is no direct way to cancel an active task, you need to do it manually, which turns out pretty hard.
 
 In `Retrofit 2.0`, however, `Square` implements this function.
 
@@ -95,8 +95,17 @@ call.enqueue(new Callback<List<RepoInfo>>() {
 });
 ```
 
+Attention, the method `onResponse` will still be invoked if the response can't be decoded, and the `response.body()` will be null. And the method will also be invoked even if there is a `404` error, and in this case we can get the error information from `response.errorBody()`.
+
+## Cancel Request
+As I say at the first of this post, a request can be easily cancelled:
+
+```Java
+call.cancel();
+```
+
 ## Source code
-You can check the source code [GithubApiService.java](https://github.com/Mindjet/NetworkThirdPartyLib/blob/master/app/src/main/java/com/mindjet/networkthirdpartylib/GithubAPIService.java) and [RetrofitActivity.java](https://github.com/Mindjet/NetworkThirdPartyLib/blob/master/app/src/main/java/com/mindjet/networkthirdpartylib/RetrofitActivity.java) in my another repo.
+You can check the source code in [GithubApiService.java](https://github.com/Mindjet/NetworkThirdPartyLib/blob/master/app/src/main/java/com/mindjet/networkthirdpartylib/GithubAPIService.java) and [RetrofitActivity.java](https://github.com/Mindjet/NetworkThirdPartyLib/blob/master/app/src/main/java/com/mindjet/networkthirdpartylib/RetrofitActivity.java) in my another repo.
 
 
 
