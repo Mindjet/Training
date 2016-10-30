@@ -29,3 +29,6 @@
 ## 10-28
 ###[Retrofit](retrofit-en.md)
 ###[Github Page](github-page.md)
+
+# 10-30
+###[Glide](glide.md)
