@@ -2,6 +2,7 @@
 
 ## 10-30
 ####[Glide](ImageLoader/glide.md)
+####[Fresco](ImageLoader/fresco.md)
 
 ## 10-28
 ####[Retrofit](retrofit-en.md)
