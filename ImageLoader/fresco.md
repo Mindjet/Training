@@ -14,8 +14,8 @@ The line below is supposed to added to the `build.gradle` of your module.
 compile 'com.facebook.fresco:fresco:0.14.1'
 ```
 
-## SimpleDraweeView
-Here I use `SimpleDraweeView` first to show what `Fresco` can do.
+## Simple sample
+Here I use `SimpleDraweeView` first to see what `Fresco` can do.
 
 ### import namespace
 First of all, import the namespace `fresco` in `xml`:
@@ -33,7 +33,7 @@ xmlns:fresco="http://schemas.android.com/apk/res-auto"
     android:layout_height="300dp"/>
 ```
 
-It's required to set `layout_width` and `layout_height` with specific number, and `wrap_content` is not permitted here. It is because when the download completes, the layout will be adjusted, and if the size of `placeholderImage` is not the same as the final image, the transition will be very sharp.
+It's required to set `layout_width` and `layout_height` with specific number, and `wrap_content` is not permitted here. It is because when the download completes, the layout will be re-adjusted, and if the size of `placeholderImage` dismatches the final image, the transition will be very sharp.
 
 You can use `wrap_content`, only when you want to display the image in a 
 specific aspect ratio.
@@ -98,3 +98,30 @@ mSimpleDraweeView.setHierarchy(hierarchy);
 ### outcome
 <img src="../screenshots/fresco-radius.png" width="250"/>
 
+### DraweeController
+`DraweeHierarchy` can modify how and what the widget displays, like setting placeholder, setting fading duration, etc. `DraweeController` focuses on the logic of the displaying, like setting listener, uri, etc.
+
+In another word, `DraweeHierarchy` controls the UI while `DraweeController` controls the action.
+
+```Java
+DraweeController controller = Fresco.newDraweeControllerBuilder()
+        .setUri(url)
+        .setOldController(mSimpleDraweeView.getController())
+        .setTapToRetryEnabled(true)
+        .build();
+mSimpleDraweeView.setController(controller);
+```
+
+In fact, when we invoke method `draweeView.setImageUri()`, this is what happen: 
+
+```Java
+public void setImageURI(Uri uri, @Nullable Object callerContext) {
+	DraweeController controller = mSimpleDraweeControllerBuilder
+	    .setCallerContext(callerContext)
+	    .setUri(uri)
+	    .setOldController(getController())
+	    .build();
+	setController(controller);
+}
+```
+See that actually we use `DraweeController` here.
