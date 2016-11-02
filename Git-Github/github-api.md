@@ -130,7 +130,7 @@ Now we get what we want.
 
 ## Screenshot
 
-<img src="screenshots/github-api.png" width="280"/>
+<img src="../screenshots/github-api.png" width="280"/>
 
 Oh you may ask that how can I get the profile of a specific user like the first item in the picture.
 
