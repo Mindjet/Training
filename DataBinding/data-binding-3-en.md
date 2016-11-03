@@ -77,7 +77,7 @@ Bingo~! Run your app and see what happen.
 
 ---
 
-You can check my repos [DataBinding-1](data-binding-1-en.md) and [DataBinding-2](data-binding-2.md) for more about `data-binding`.
+You can check my posts [DataBinding-1](data-binding-1-en.md),  [DataBinding-2](data-binding-2.md) for more about `data-binding`.
 
 
 
