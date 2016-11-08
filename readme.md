@@ -39,4 +39,3 @@
 - **[Data-binding-1 (introduciton and usage in listview)](DataBinding/data-binding-1-en.md)** (10.14)
 
 - **[PercentLayout](percent-layout.md)** (10.14)
-
