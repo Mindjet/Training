@@ -93,13 +93,13 @@ public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 需要对传入的`ViewHolder`对象进行判断，判断是`ButtonViewHolder`还是`ImageViewHolder`的实例，再根据不同情况进行`UI`的设定。
 
 ### 5. 效果
-<img src="screenshots/recycler-view-screen-3.png" width="250"/>
+<img src="../screenshots/recycler-view-screen-3.png" width="250"/>
 
 
 
 ## 瀑布流
 ### 1. 效果
-<img src="screenshots/recycler-view-screen-4.png" width="250"/>
+<img src="../screenshots/recycler-view-screen-4.png" width="250"/>
 
 ### 2. 利用StaggerLayoutManager
 利用`StaggerLayoutManager`可以轻松地实现瀑布流效果。

@@ -1,4 +1,4 @@
-﻿# RecyclerView-4
+# RecyclerView-4
 更多关于`RecyclerView`：  
 - [RecyclerView(介绍与简单使用)](recycler-view-1.md)  
 - [RecyclerView(布局)](recycler-view-2.md)  
@@ -127,7 +127,7 @@ public void clearView(RecyclerView recyclerView, RecyclerView.ViewHolder viewHol
 ```
 
 ## 效果
-<img src="screenshots/recycler-view-anim.gif"/>
+<img src="../screenshots/recycler-view-anim.gif"/>
 
 
 ## 总结

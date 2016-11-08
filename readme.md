@@ -22,11 +22,11 @@
 
 - **[OkHttp](HttpClient/okhttp.md)**	(10.25)
 
-- **[RecyclerView-2 (multi-item and waterfall)](RecyclerView/recycler-view-2.md)** (10.20)
+- **[RecyclerView-4 (drag and swipe)](RecyclerView/recycler-view-4.md)** (10.20)
 
 - **[RecyclerView-3 (listener)](RecyclerView/recycler-view-3.md)** (10.20)
 
-- **[RecyclerView-4 (drag and swipe)](RecyclerView/recycler-view-4.md)** (10.20)
+- **[RecyclerView-2 (multi-item and waterfall)](RecyclerView/recycler-view-2.md)** (10.20)
 
 - **[RecyclerView-1 (introduction and simple sample)](RecyclerView/recycler-view-1.md)** (10.19)
 
@@ -36,7 +36,7 @@
 
 - **[Data-binding-2 (UI-updating)](DataBinding/data-binding-2.md)** (10.17)
 
-- **[PercentLayout](percent-layout.md)** (10.14)
-
 - **[Data-binding-1 (introduciton and usage in listview)](DataBinding/data-binding-1-en.md)** (10.14)
+
+- **[PercentLayout](percent-layout.md)** (10.14)
 
