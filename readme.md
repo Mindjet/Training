@@ -2,6 +2,8 @@
 
 ## 2016.11
 
+- **[Android MVVM](DesignFramework/android-mvvm.md)** (11.10)
+
 - **[Android MVP](DesignFramework/android-mvp.md)** (11.08)
 
 - **[MVC/MVP/MVVM](DesignFramework/mvc-mvp-mvvm.md)** (11.07)
