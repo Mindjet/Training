@@ -1,4 +1,7 @@
-#WAY TO ANDROID
+# WAY TO ANDROID
+
+## DEPRECATED
+This repo is already **DEPRECATED**, all contents and articles have been moved to my personal website [mindjet.github.io](https://mindjet.github.io). Or you can visit them in my another [repo](https://github.com/Mindjet/mindjet.github.io).
 
 ## 2016.11
 
